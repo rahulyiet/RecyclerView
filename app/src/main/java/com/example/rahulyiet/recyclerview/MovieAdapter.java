@@ -4,6 +4,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -15,12 +16,16 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public TextView title, year, genre;
+        public ImageView imageView;
+
 
         public ViewHolder(View view) {
             super(view);
             title = (TextView) view.findViewById(R.id.title);
             genre = (TextView) view.findViewById(R.id.genre);
             year = (TextView) view.findViewById(R.id.year);
+            imageView=(ImageView)view.findViewById(R.id.imageView);
+
         }
     }
 
@@ -28,7 +33,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
         this.MoviesList = MoviesList;
     }
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(ViewGroup  parent, int viewType) {
 
         View View = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.list_item, parent, false);
@@ -44,6 +49,8 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
         holder.title.setText(movie.getTitle());
         holder.genre.setText(movie.getGenre());
         holder.year.setText(movie.getYear());
+        holder.imageView.setImageResource(movie.getImageView());
+
 
     }
 
