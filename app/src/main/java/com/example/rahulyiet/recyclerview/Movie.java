@@ -3,15 +3,7 @@ package com.example.rahulyiet.recyclerview;
 public class Movie {
 
     private String title, genre, year;
-    private int imageView;
-
-
-    public Movie(String title, String genre, String year) {
-        this.title = title;
-        this.genre = genre;
-        this.year = year;
-        this.imageView = imageView;
-    }
+    private int image;
 
     public String getTitle() {
         return title;
@@ -37,12 +29,19 @@ public class Movie {
         this.year = year;
     }
 
-    public int getImageView() {
-        return imageView;
+    public int getimage() {
+        return image;
     }
 
-    public void setImageView(int year) {
-        this.imageView = imageView;
+    public void setimage(int image) {
+        this.image = image;
+    }
+
+    public Movie(String title, String genre, String year) {
+        this.title = title;
+        this.genre = genre;
+        this.year = year;
+        this.image = image;
     }
 
 }

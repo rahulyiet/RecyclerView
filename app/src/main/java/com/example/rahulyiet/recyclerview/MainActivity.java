@@ -33,33 +33,33 @@ public class MainActivity extends AppCompatActivity {
 
     private void prepareMovieData() {
         Movie movie = new Movie("Race3", "Action ", "2018");
-
+        movie.setimage(R.drawable.race);
         movieList.add(movie);
-        movie.setImageView(R.drawable.race);
+
 
 
         movie = new Movie("Tiger Zinda Hai", "Action", "2018");
-
+        movie.setimage(R.drawable.tiger);
         movieList.add(movie);
-        movie.setImageView(R.drawable.tiger);
+
 
 
         movie = new Movie("Star Wars: Episode VII - The Force Awakens", "Action", "2015");
-
+        movie.setimage(R.drawable.starwar);
         movieList.add(movie);
-        movie.setImageView(R.drawable.starwar);
+
 
 
         movie = new Movie("Avengers = Infinity war", "Action", "2018");
-
+        movie.setimage(R.drawable.avengers);
         movieList.add(movie);
-        movie.setImageView(R.drawable.avengers);
 
 
-        movie = new Movie("Dhadkan", "Love story", "2002");
 
+        movie = new Movie("Kahonaa pyar hai", "Love story", "2002");
+        movie.setimage(R.drawable.pyar);
         movieList.add(movie);
-        movie.setImageView(R.drawable.starwar);
+
 
 
 

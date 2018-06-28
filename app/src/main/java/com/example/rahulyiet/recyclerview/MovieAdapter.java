@@ -16,7 +16,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public TextView title, year, genre;
-        public ImageView imageView;
+        public ImageView image;
 
 
         public ViewHolder(View view) {
@@ -24,7 +24,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
             title = (TextView) view.findViewById(R.id.title);
             genre = (TextView) view.findViewById(R.id.genre);
             year = (TextView) view.findViewById(R.id.year);
-            imageView=(ImageView)view.findViewById(R.id.imageView);
+            image=(ImageView)view.findViewById(R.id.image);
 
         }
     }
@@ -49,7 +49,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
         holder.title.setText(movie.getTitle());
         holder.genre.setText(movie.getGenre());
         holder.year.setText(movie.getYear());
-        holder.imageView.setImageResource(movie.getImageView());
+        holder.image.setImageResource(movie.getimage());
 
 
     }
